@@ -22,11 +22,8 @@ haystack and needle consist of only lowercase English characters.
 */
 
 function strStr(haystack: string, needle: string): number {
-    console.log('haystack, needle: ', haystack, needle)
     let indexOfFirst: number = 0
     let notPartInHS: number = -1
-    console.log(haystack[0])
-    console.log(needle[0])
 
     // 길이 확인하여 needle이 더 길 경우 -1 반환
     if(needle.length>haystack.length) return notPartInHS 
@@ -36,7 +33,7 @@ function strStr(haystack: string, needle: string): number {
     const splits = haystack.split(needle)
     console.log('splits: ',splits)
 
-    // needle로 haystack이  구분 안 되면, 결과는 haystack 본인이 된다.
+    // needle로 haystack이 구분 안 되면, 결과는 haystack 본인이 된다.
     if(splits[0].length === haystack.length) return notPartInHS
 
     // needle로 haystack이 구분되면, split의 첫 번째 배열에 haystack보다 짧은 문자열이 입력된다.
@@ -46,4 +43,5 @@ function strStr(haystack: string, needle: string): number {
     return indexOfFirst
 };
 
-strStr('leetcode', 'eet')
+strStr('leetcode', 'le')
+// console.log('result: ', 'leetcode'.indexOf('1231'))
